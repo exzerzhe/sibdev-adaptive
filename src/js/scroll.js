@@ -4,7 +4,6 @@ const headerInput = document.getElementById("header-input")
 
 function scroll(){
     if (window.pageYOffset > 0){
-        console.log(window.pageYOffset)
         header.classList.add("sticky")
         headerInput.style.setProperty('margin', "27px 21px 27px 68px")
     } else {
