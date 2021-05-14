@@ -12,6 +12,10 @@ function scroll(){
         menuIcon.style.setProperty('display', "none")
         inputForm.style.setProperty("padding-left", "16px")
     }
+    if (window.innerWidth > 321){
+        menuIcon.style.setProperty('display', "inline")
+        inputForm.style.setProperty("padding-left", "44px")
+    }
     if (window.pageYOffset > 0){
         header.classList.add("sticky")
         headerInput.style.setProperty('margin', "27px 21px 27px 68px")

@@ -39,6 +39,13 @@ menu.forEach(({id, title, svg})=>{
 })
 document.getElementById('menu').innerHTML = out;
 
+window.addEventListener('resize', function() {
+    const sideBarStatus = document.getElementById("sidebar").classList.contains("opened")
+    if (window.innerWidth > 1000 && sideBarStatus){
+        openButton.click()
+    }
+}, true)
+
 const buttons = document.querySelectorAll(".content")
 document.getElementById("1").classList.add("active")
 document.getElementById("header-title").innerHTML = "Каталог"
@@ -57,16 +64,10 @@ function chooseContent(id, name){
 const openButton = document.getElementById("sidebar-container")
 openButton.addEventListener("click", function (e){openMenu(e.target.id)})
 
-window.addEventListener('resize', function() {
-    const sideBarStatus = document.getElementById("sidebar").classList.contains("opened")
-    if (window.innerWidth > 1000 && sideBarStatus){
-        openButton.click()
-    }
-}, true)
 function openMenu(id){
     if (id === "sidebar-container") {
-        let options = document.querySelectorAll(".content__title")
-        let sidebar = document.getElementById("sidebar")
+        const options = document.querySelectorAll(".content__title")
+        const sidebar = document.getElementById("sidebar")
         options.forEach((el) => {
             el.classList.toggle("opened")
         })
