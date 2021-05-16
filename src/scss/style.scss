@@ -157,7 +157,7 @@ button{
   line-height: 24px;
 }
 .active{
-  filter: invert(57%) sepia(97%) saturate(981%) hue-rotate(166deg) brightness(94%) contrast(87%);
+  border: 1px solid currentColor;
   color: #34abe0
 }
 .active::before {
